@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: sebat
-Donate link: http://sebastian.thiele.me/
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8SJ8H4LC3LKF2
 Tags: widget, sidebar, QR-Code, mobile
 Requires at least: 2.0
 Tested up to: 2.9.2
