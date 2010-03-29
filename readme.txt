@@ -4,7 +4,9 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: widget, sidebar, QR-Code, mobile
 Requires at least: 2.0
 Tested up to: 2.9.2
-Stable tag: 1.0
+Stable tag: 1.1
+Author: Sebastian Thiele
+Author URI: htt://sebastian.thiele.me
 
 Diese Plugin baut ein Sidebar-Widget ein, in dem ein in der größe anpassbarer QR Code angezeigt wird, der auf die aktuelle URL verweist.
 
@@ -39,6 +41,9 @@ Der QR-Code ist ein zweidimensionaler Barcode, der von (zum Beispiel) Handys abf
 
 == Changelog ==
 
+= 1.1 =
+* Werte aus dem Backend können jetzt auch HTML enthalten.
+
 = 1.0 =
 * Einbau der der Sidebar
 * Größenanpassung
@@ -46,6 +51,9 @@ Der QR-Code ist ein zweidimensionaler Barcode, der von (zum Beispiel) Handys abf
 * Individueller Beschreibungstext
 
 == Upgrade Notice ==
+
+= 1.1 =
+* HTML speicherbar
 
 = 1.0 =
 Startversion
