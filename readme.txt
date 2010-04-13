@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: widget, sidebar, QR-Code, mobile
 Requires at least: 2.0
 Tested up to: 2.9.2
-Stable tag: 1.2
+Stable tag: 1.2.1
 Author: Sebastian Thiele
 Author URI: htt://sebastian.thiele.me
 
@@ -32,11 +32,11 @@ Dabei wird die Google Chart-Api verwendet.
 
 = Was ist ein QR-Code =
 
-Der QR-Code ist ein zweidimensionaler Barcode, der von (zum Beispiel) Handys abfotografiert werden kann, entschl‚àö¬∫sselt wird und in diesem Fall den Benutzer dann auf die URL der aktuellen Seite leitet.
+Der QR-Code ist ein zweidimensionaler Barcode, der von (zum Beispiel) Handys abfotografiert werden kann, entschl‚Äö√†√∂¬¨‚à´sselt wird und in diesem Fall den Benutzer dann auf die URL der aktuellen Seite leitet.
 
 = Kann ich auch andere Dinge als QR-Code darstellen? =
 Ja. Es gibt zwei Funktionen, die dies zur verfuegung stellen: 
-`getQRURL($size)` diese Funktion erwartet als Parameter nur eine groesse in Pixel z.B. `getQRURL(120)` Gibt einen QR Code der aktuellen Seite mit den Ma√üen 120px x 120px aus
+`getQRURL($size)` diese Funktion erwartet als Parameter nur eine groesse in Pixel z.B. `getQRURL(120)` Gibt einen QR Code der aktuellen Seite mit den Ma‚àö√ºen 120px x 120px aus
 `getQR($encode, $size)` diese Funktion erwartet einen String, der umgewandelt werden soll und die groesse.
 Beide Funktionen koennen im Theme verwendet werden z.B.
 `<img src="<?php echo getQRURL($size); ?>" alt="xy" />`
@@ -48,6 +48,9 @@ Beide Funktionen koennen im Theme verwendet werden z.B.
 2. Beispielanzeige, wie es im Frontend aussehen kann.
 
 == Changelog ==
+= 1.2.1 =
+* Bugfixing
+* Behoben: trotz einstellungen wo angezeigt und wo nicht wurde dennoch der QR Code angezeigt.
 
 = 1.2 =
 * Code verbessert
