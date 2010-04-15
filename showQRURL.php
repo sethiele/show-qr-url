@@ -18,6 +18,15 @@ function getQRURL($size)
 
 // Erweiterte Ausgabe von beliebigen Text
 function getQR($encode, $size) {
+	if(get_option('showQRUTLkampagnenSoftware')){
+		if (strpos($encode, "?")) $sign = "&"; else $sign = "?";
+		if(get_option('showQRUTLkampagnenSoftware') == 'piwik') {
+			$encode.=$sign."piwik_campaign=".get_option('showQRURLkampagnenName')."&piwik_kwd=".get_option('showQRURLkampagnenValue');		}
+		elseif(get_option('showQRUTLkampagnenSoftware') == 'google') {
+			$encode.=$sign."utm_source=mobile&utm_campaign=".get_option('showQRURLkampagnenName')."&utm_medium=".get_option('showQRURLkampagnenValue');		}
+	}
+
+	
 	return 'http://chart.apis.google.com/chart?chs='.$size.'x'.$size.'&cht=qr&chl='.urlencode ($encode).'&choe=UTF-8';
 }
 
@@ -155,6 +164,11 @@ function showQRURL_control() {
 	";
 }
 
+function showQRURL_jquery(){
+	wp_deregister_script('jquery');
+	wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js');
+
+}
 
 function showQRURL_admin() {
 	add_options_page('Show QR URL', 'Show QR URL', 9, 'show-qr-url', showQRURL_admin_show);
@@ -164,10 +178,13 @@ function showQRURL_init(){
 	register_sidebar_widget("Show QR URL", "widget_showQRURL");
 	register_widget_control("Show QR URL", "showQRURL_control", 300, 200);
 	// Localization
-	$plugin_dir = basename(dirname(__FILE__));
-	load_plugin_textdomain( 'myplugin', 'wp-content/plugins/' . $plugin_dir, $plugin_dir );
+	//load_plugin_textdomain('showqrurl', 'wp-content/plugins/show-qr-url', 'lang');
 
 }
 add_action("plugins_loaded", "showQRURL_init");
 add_action("admin_menu", "showQRURL_admin");
+add_action("admin_init", "showQRURL_jquery");
+add_action("admin_head", "shoqQRURL_admin_js");
+
+
 ?>
