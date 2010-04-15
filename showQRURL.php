@@ -5,8 +5,10 @@ Plugin URI: http://sebastian.thiele.me/projekte/wordpress-plugin-show-qr-url
 Description: This Plugin shows a QR-Code with the encoded URL of the corent Page. Useing Google Shart API
 Author: Sebastian Thiele
 Author URI: htt://sebastian.thiele.me
-Version: 1.2.1
+Version: 1.3
 */
+
+include("showQRURLadmin.php");
 
 // Einfache ausgabe der aktuellen URL
 function getQRURL($size)
@@ -88,7 +90,7 @@ function showQRURL_control() {
 			$options[size] = 200;
 			$options[text] = "Das ist ein so genannter QR Code. Wenn ihr ein Handy mit einer Kamera und ein installiertes Leseprogramm habt, koennt ihr den Code einscannen und werdet irgendwo hingeleitet";
 	}
-	//Ver√§nderungen im Backend
+	//Ver‚àö¬ßnderungen im Backend
 	if($options[showQRURLversion] < 1.2) {
 		$options[showQRURLhome] = "checked";
 		$options[showQRURLsingle] = "checked";
@@ -153,9 +155,19 @@ function showQRURL_control() {
 	";
 }
 
+
+function showQRURL_admin() {
+	add_options_page('Show QR URL', 'Show QR URL', 9, 'show-qr-url', showQRURL_admin_show);
+}
+
 function showQRURL_init(){
 	register_sidebar_widget("Show QR URL", "widget_showQRURL");
 	register_widget_control("Show QR URL", "showQRURL_control", 300, 200);
+	// Localization
+	$plugin_dir = basename(dirname(__FILE__));
+	load_plugin_textdomain( 'myplugin', 'wp-content/plugins/' . $plugin_dir, $plugin_dir );
+
 }
 add_action("plugins_loaded", "showQRURL_init");
+add_action("admin_menu", "showQRURL_admin");
 ?>
