@@ -69,7 +69,7 @@ function widget_showQRURL($args) {
 		echo "<img src=\"".getQRURL($options[size])."\" alt=\"QR Code fuer diese Seite\" />";
 		echo "</div>";
 		echo "<div class=\"showQRURLtext\">".$options[text]."</div>";
-		if($options[showQRURLsupport]) echo "<div class=\"showQRURLsupport\" style=\"text-align:center\">QR-Widget v".$options[showQRURLversion]." by <a href=\"http://sebastian.thiele.me/projekte/wordpress-plugin-show-qr-url\">Sebastian Thiele</a></div>";
+		if($options[showQRURLsupport]) echo "<div class=\"showQRURLsupport\" style=\"text-align:center\">QR-Widget v".$options[showQRURLversion]." by <a href=\"http://sebastian.thiele.me/projekte/wordpress-plugin-show-qr-url?piwik_campaign=Plugins&piwik_kwd=ShowQRURL\">Sebastian Thiele</a></div>";
 		echo $after_widget;
 	}
 	echo "<!-- QR Widtget von Sebastian Thiele - http://sebastian.thiele.me -->";
@@ -164,11 +164,7 @@ function showQRURL_control() {
 	";
 }
 
-function showQRURL_jquery(){
-	wp_deregister_script('jquery');
-	wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js');
 
-}
 
 function showQRURL_admin() {
 	add_options_page('Show QR URL', 'Show QR URL', 9, 'show-qr-url', showQRURL_admin_show);
@@ -185,7 +181,6 @@ function showQRURL_init(){
 }
 add_action("plugins_loaded", "showQRURL_init");
 add_action("admin_menu", "showQRURL_admin");
-add_action("admin_init", "showQRURL_jquery");
 add_action("admin_head", "shoqQRURL_admin_js");
 
 
