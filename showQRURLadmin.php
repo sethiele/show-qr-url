@@ -2,19 +2,11 @@
 function showQRURL_admin_show() {
 	
 	$options = get_option('widget_showQRURL');
-	
-	if($_POST[showQRURLsubmit]) {
-		$options[showQRURLkampagnenName] = $_POST[showQRURLkampagnenName];
-		$options[showQRURLkampagnenValue] = $_POST[showQRURLkampagnenValue];
-		update_option("widget_showQRURL", $options);
-		echo "HALLO";
-	}
-	echo $_POST[action];
 ?>
 
 
 <div class="wrap">
-	<h2><?php echo __('Show QR Option Seite', 'showqrurl'); ?></h2>
+	<h2><?php _e('Show QR Option Seite', 'showqrurl'); ?></h2>
 	<form method="post" action="options.php">
 	<?php wp_nonce_field('update-options'); ?>
 	

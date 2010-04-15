@@ -1,0 +1,55 @@
+# Translation of the WordPress plugin   by .
+# Copyright (C) 2010
+# This file is distributed under the same license as the  package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Show QR URL\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/show-qr-url\n"
+"POT-Creation-Date: 2010-04-15 11:31+0000\n"
+"PO-Revision-Date: 2010-04-15 14:48+0100\n"
+"Last-Translator: Sebastian <post@thiele.me>\n"
+"Language-Team: Sebastian <post@thiele.me>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+
+#: showQRURLadmin.php:17
+msgid "Show QR Option Seite"
+msgstr "Show QR Option Seite"
+
+#: showQRURLadmin.php:22
+msgid "Kampagnen Tracken"
+msgstr "Kampagnen Tracken"
+
+#: showQRURLadmin.php:25
+msgid "Kampagnen Name"
+msgstr "Kampagnen Name"
+
+#: showQRURLadmin.php:30
+msgid "Kampagnen Wert"
+msgstr "Kampagnen Wert"
+
+#: showQRURLadmin.php:35
+msgid "Kampagnen Trackingsoftware"
+msgstr "Kampagnen Trackingsoftware"
+
+#: showQRURLadmin.php:37
+msgid "Deaktiviert"
+msgstr "Deaktiviert"
+
+#: showQRURLadmin.php:38
+msgid "piwik"
+msgstr "Piwik"
+
+#: showQRURLadmin.php:39
+msgid "Google Analytics"
+msgstr "Google Analytics"
+
+#: showQRURLadmin.php:50
+msgid "Speichern"
+msgstr "Speichern"
+

@@ -112,52 +112,52 @@ function showQRURL_control() {
 	
 	echo "
 	<p>
-		<label for=\"showQRURLtitle\">&Uuml;berschrift:</label>
+		<label for=\"showQRURLtitle\">".__('&Uuml;berschrift', 'showqrurl').":</label><br />
 		<input type=\"text\" id=\"showQRURLtitle\" name=\"showQRURLtitle\" value=\"$options[title]\" />
 	</p>
 	<p>
-		<label for=\"showQRURLsize\">Breite und H&ouml;he:</label>
+		<label for=\"showQRURLsize\">".__('Breite und H&ouml;he', 'showqrurl').":</label><br />
 		<input type=\"text\" id=\"showQRURLsize\" name=\"showQRURLsize\" value=\"$options[size]\" />
 		<input type=\"hidden\" name=\"showQRURLsubmit\" value=\"submit\" />
 	</p>
 	<p>
-		<label for=\"showQRURLtext\">Text unter dem QR Code:</label>
+		<label for=\"showQRURLtext\">".__('Text unter dem QR Code', 'showqrurl').":</label><br />
 		<textarea id=\"showQRURLtext\" name=\"showQRURLtext\" style=\"width:100%\">$options[text]</textarea>
 	</p>
 	<hr />
 	<p>
-		<b>Anzeigeoptionen</b>
+		<b>".__('Anzeigeoptionen', 'showqrurl')."</b>
 	</p>
 	<p>
-		<label for=\"showQRURLhome\">Anzeigen auf Blog&uuml;bersichtsseite</label>
+		<label for=\"showQRURLhome\">".__('Anzeigen auf Blog&uuml;bersichtsseite', 'showqrurl')."</label>
 		<input type=\"checkbox\" name=\"showQRURLhome\" value=\"checked\" $options[showQRURLhome] />
 	</p>
 	<p>
-		<label for=\"showQRURLsingle\">Anzeigen auf Single-Seiten</label>
+		<label for=\"showQRURLsingle\">".__('Anzeigen auf Single-Seiten', 'showqrurl')."</label>
 		<input type=\"checkbox\" name=\"showQRURLsingle\" value=\"checked\" $options[showQRURLsingle] />
 	</p>
 	<p>
-		<label for=\"showQRURLpage\">Anzeigen auf Seiten</label>
+		<label for=\"showQRURLpage\">".__('Anzeigen auf Seiten', 'showqrurl')."</label>
 		<input type=\"checkbox\" name=\"showQRURLpage\" value=\"checked\" $options[showQRURLpage] />
 	</p>
 	<p>
-		<label for=\"showQRURLcategory\">Anzeigen auf &Uuml;bersichtsseiten f&uuml;r Kategorien</label>
+		<label for=\"showQRURLcategory\">".__('Anzeigen auf &Uuml;bersichtsseiten f&uuml;r Kategorien', 'showqrurl')."</label>
 		<input type=\"checkbox\" name=\"showQRURLcategory\" value=\"checked\" $options[showQRURLcategory] />
 	</p>
 	<p>
-		<label for=\"showQRURLtag\">Anzeigen auf &Uuml;bersichtsseiten f&uuml;r Tags</label>
+		<label for=\"showQRURLtag\">".__('Anzeigen auf &Uuml;bersichtsseiten f&uuml;r Tags', 'showqrurl')."</label>
 		<input type=\"checkbox\" name=\"showQRURLtag\" value=\"checked\" $options[showQRURLtag] />
 	</p>
 	<p>
-		<label for=\"showQRURLdate\">Anzeigen auf &Uuml;bersichtsseiten f&uuml;r Datum</label>
+		<label for=\"showQRURLdate\">".__('Anzeigen auf &Uuml;bersichtsseiten f&uuml;r Datum', 'showqrurl')."</label>
 		<input type=\"checkbox\" name=\"showQRURLdate\" value=\"checked\" $options[showQRURLdate] />
 	</p>
 	<hr />
 	<p>
-		<b>Sonstiges</b>
+		<b>".__('Sonstiges', 'showqrurl')."</b>
 	</p>
 	<p>
-		<label for=\"showQRURLsupport\">Link auf Entwicklerseite einbinden</label>
+		<label for=\"showQRURLsupport\">".__('Link auf Entwicklerseite einbinden', 'showqrurl')."</label>
 		<input type=\"checkbox\" name=\"showQRURLsupport\" value=\"checked\" $options[showQRURLsupport] />
 	</p>
 	
@@ -178,7 +178,9 @@ function showQRURL_init(){
 	register_sidebar_widget("Show QR URL", "widget_showQRURL");
 	register_widget_control("Show QR URL", "showQRURL_control", 300, 200);
 	// Localization
-	//load_plugin_textdomain('showqrurl', 'wp-content/plugins/show-qr-url', 'lang');
+	$plugindir = basename(dirname(__FILE__));
+	load_plugin_textdomain( 'showqrurl', 'wp-content/plugins/' . $plugindir.'/lang', false );
+
 
 }
 add_action("plugins_loaded", "showQRURL_init");
