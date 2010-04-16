@@ -8,19 +8,24 @@ function showQRURL_admin_show() {
 <div class="wrap">
 	<h2><?php _e('Show QR Option Seite', 'showqrurl'); ?></h2>
 	<form method="post" action="options.php">
-	<?php wp_nonce_field('update-options'); ?>
+	<?php wp_nonce_field('update-options');¬†?>
 	
 	
-	<div class="seperator" id="showqrurl-kampagne"><?php _e('Kampagnen Tracken', 'showqrurl'); ?></div>
-	<table class="form-table">
+	<div id="poststuff" class="ui-sorttable">
+		<div class="postbox closed" id="showqrurlkampagne">
+			<h3><?php _e('Kampagnen Tracken', 'showqrurl'); ?></h3>
+		</div>
+	</div>
+	
+	<table class="form-table" id="showqrurlkampagnetable">
 		<tr valign="top">
 			<th scope="row"><?php _e('Kampagnen Name', 'showqrurl'); ?></th>
-			<td><input type="text" name="showQRURLkampagnenName" value="<?php echo get_option('showQRURLkampagnenName'); ?>" /></td>
+			<td><input type="text" name="showQRURLkampagnenName" value="<?php echo get_option('showQRURLkampagnenName');¬†?>" /></td>
 		</tr>
 		
 		<tr valign="top">
 			<th scope="row"><?php _e('Kampagnen Wert', 'showqrurl'); ?></th>
-			<td><input type="text" name="showQRURLkampagnenValue" value="<?php echo get_option('showQRURLkampagnenValue'); ?>" /></td>
+			<td><input type="text" name="showQRURLkampagnenValue" value="<?php echo get_option('showQRURLkampagnenValue');¬†?>" /></td>
 		</tr>
 		
 		<tr valign="top">
@@ -39,7 +44,7 @@ function showQRURL_admin_show() {
 
 
 	<p class="submit">
-		<input type="submit" class="button-primary" value="<?php _e('Speichern', 'showqrurl'); ?>" />
+		<input type="submit" class="button-primary" value="<?php _e('Speichern', 'showqrurl');?>" />
 	</p>
 	</form>
 </div>
@@ -55,11 +60,14 @@ function shoqQRURL_admin_js() {
 ?>
 <script type="text/javascript" >
 jQuery(document).ready(function($) {
-	$(document).ready(function() {
-		//alert("HALLO");
+	$('#showqrurlkampagne').click(function(){
+		if($('#showqrurlkampagnetable').is(":visible"))
+	    	$('#showqrurlkampagnetable').hide();
+	    else
+	    	$('#showqrurlkampagnetable').show();
 	});
-	
 });
+
 </script>
 <?php
 }

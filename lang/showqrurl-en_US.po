@@ -1,0 +1,103 @@
+# Translation of the WordPress plugin   by .
+# Copyright (C) 2010
+# This file is distributed under the same license as the  package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Show QR URL\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/show-qr-url\n"
+"POT-Creation-Date: 2010-04-15 13:28+0000\n"
+"PO-Revision-Date: 2010-04-16 07:30+0100\n"
+"Last-Translator: Sebastian <post@thiele.me>\n"
+"Language-Team: Sebastian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+
+#: showQRURL.php:115
+msgid "&Uuml;berschrift"
+msgstr "Title"
+
+#: showQRURL.php:119
+msgid "Breite und H&ouml;he"
+msgstr "height and weidth"
+
+#: showQRURL.php:124
+msgid "Text unter dem QR Code"
+msgstr "text under the QR code"
+
+#: showQRURL.php:129
+msgid "Anzeigeoptionen"
+msgstr "view options"
+
+#: showQRURL.php:132
+msgid "Anzeigen auf Blog&uuml;bersichtsseite"
+msgstr "view on blog overview page"
+
+#: showQRURL.php:136
+msgid "Anzeigen auf Single-Seiten"
+msgstr "view on single page"
+
+#: showQRURL.php:140
+msgid "Anzeigen auf Seiten"
+msgstr "view on pages"
+
+#: showQRURL.php:144
+msgid "Anzeigen auf &Uuml;bersichtsseiten f&uuml;r Kategorien"
+msgstr "view on category overview pages"
+
+#: showQRURL.php:148
+msgid "Anzeigen auf &Uuml;bersichtsseiten f&uuml;r Tags"
+msgstr "view on tag overview pages"
+
+#: showQRURL.php:152
+msgid "Anzeigen auf &Uuml;bersichtsseiten f&uuml;r Datum"
+msgstr "view on date overview pages"
+
+#: showQRURL.php:157
+msgid "Sonstiges"
+msgstr "other"
+
+#: showQRURL.php:160
+msgid "Link auf Entwicklerseite einbinden"
+msgstr "show link to developer page"
+
+#: showQRURLadmin.php:9
+msgid "Show QR Option Seite"
+msgstr "show QR URL - option page"
+
+#: showQRURLadmin.php:14
+msgid "Kampagnen Tracken"
+msgstr "tracking campaign"
+
+#: showQRURLadmin.php:17
+msgid "Kampagnen Name"
+msgstr "campaign name"
+
+#: showQRURLadmin.php:22
+msgid "Kampagnen Wert"
+msgstr "campaign value"
+
+#: showQRURLadmin.php:27
+msgid "Kampagnen Trackingsoftware"
+msgstr "campaign tracking software"
+
+#: showQRURLadmin.php:29
+msgid "Deaktiviert"
+msgstr "disabled"
+
+#: showQRURLadmin.php:30
+msgid "piwik"
+msgstr "Piwik"
+
+#: showQRURLadmin.php:31
+msgid "Google Analytics"
+msgstr "Google Analytics"
+
+#: showQRURLadmin.php:42
+msgid "Speichern"
+msgstr "save"
+

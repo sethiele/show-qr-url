@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: widget, sidebar, QR-Code, mobile, piwik, Google Analytics
 Requires at least: 2.0
 Tested up to: 2.9.2
-Stable tag: 1.3
+Stable tag: 1.4
 Author: Sebastian Thiele
 Author URI: htt://sebastian.thiele.me
 
@@ -21,6 +21,9 @@ Dabei wird die Google Chart-Api verwendet.
 * Sollte sich ein Benutzer dazu entschliessen, einen Artikel auszudrucken, kann er/ sie die Ursprungsseite schnell und einfach durch Abfotografieren des Codes wieder oeffnen.
 * Ein Benutzer, der in Eile ist, kann die Seite in einem mobilen Entgerart oeffnen und unterwegs lesen.
 * Es ist eine relativ neue und inovative Technik
+
+Supported languages: german, english
+POT file includes in the `lang` folder.
 
 == Installation ==
 
@@ -48,9 +51,15 @@ Beide Funktionen koennen im Theme verwendet werden z.B.
 2. Beispielanzeige, wie es im Frontend aussehen kann.
 
 == Changelog ==
+
+= 1.4 =
+* Multilanguage support
+* german, english
+* jquery bugfix
+
 = 1.3 =
 * Neue Optionenseite
-* Tracking möglich Pwiki und Google Analytics
+* Tracking moeglich Pwiki und Google Analytics
 
 
 

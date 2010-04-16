@@ -5,7 +5,7 @@ Plugin URI: http://sebastian.thiele.me/projekte/wordpress-plugin-show-qr-url
 Description: This Plugin shows a QR-Code with the encoded URL of the corent Page. Useing Google Shart API
 Author: Sebastian Thiele
 Author URI: htt://sebastian.thiele.me
-Version: 1.3
+Version: 1.4
 */
 
 include("showQRURLadmin.php");
@@ -81,7 +81,7 @@ function showQRURL_control() {
 	
 	
 	if($_POST[showQRURLsubmit]) {
-		$options[showQRURLversion] = 1.2;
+		$options[showQRURLversion] = 1.4;
 		$options[title] = $_POST[showQRURLtitle];
 		$options[size] = htmlspecialchars($_POST[showQRURLsize]);
 		$options[text] = $_POST[showQRURLtext];
@@ -99,7 +99,7 @@ function showQRURL_control() {
 			$options[size] = 200;
 			$options[text] = "Das ist ein so genannter QR Code. Wenn ihr ein Handy mit einer Kamera und ein installiertes Leseprogramm habt, koennt ihr den Code einscannen und werdet irgendwo hingeleitet";
 	}
-	//Ver‚àö¬ßnderungen im Backend
+	//Ver‚Äö√Ñ√∂‚àö‚Ä†‚àö‚àÇ¬¨¬®‚àö√ºnderungen im Backend
 	if($options[showQRURLversion] < 1.2) {
 		$options[showQRURLhome] = "checked";
 		$options[showQRURLsingle] = "checked";
@@ -170,6 +170,11 @@ function showQRURL_admin() {
 	add_options_page('Show QR URL', 'Show QR URL', 9, 'show-qr-url', showQRURL_admin_show);
 }
 
+$plugindir = basename(dirname(__FILE__));
+wp_enqueue_style("showqrurl_admin_css","/wp-content/plugins/show-qr-url/css/admin.css", false, 'last', 'all');
+
+
+
 function showQRURL_init(){
 	register_sidebar_widget("Show QR URL", "widget_showQRURL");
 	register_widget_control("Show QR URL", "showQRURL_control", 300, 200);
@@ -182,6 +187,7 @@ function showQRURL_init(){
 add_action("plugins_loaded", "showQRURL_init");
 add_action("admin_menu", "showQRURL_admin");
 add_action("admin_head", "shoqQRURL_admin_js");
+
 
 
 ?>
