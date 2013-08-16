@@ -1,12 +1,11 @@
 === Plugin Name ===
 Contributors: sebat
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8SJ8H4LC3LKF2
 Tags: widget, sidebar, QR-Code, mobile, piwik, Google Analytics
 Requires at least: 2.0
-Tested up to: 2.9.2
-Stable tag: 1.4
+Tested up to: 3.6
+Stable tag: 1.4.1
 Author: Sebastian Thiele
-Author URI: htt://sebastian.thiele.me
+Author URI: htt://www.sebastian-thiele.net
 
 Diese Plugin baut ein Sidebar-Widget ein, in dem ein in der groessee anpassbarer QR Code angezeigt wird, der auf die aktuelle URL verweist.
 
@@ -51,6 +50,9 @@ Beide Funktionen koennen im Theme verwendet werden z.B.
 2. Beispielanzeige, wie es im Frontend aussehen kann.
 
 == Changelog ==
+
+= 1.4.1 =
+* Kompatibilität mit aktuellen Wordpress Versionen
 
 = 1.4 =
 * Multilanguage support
