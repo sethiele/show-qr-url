@@ -1,12 +1,31 @@
 <?php
 /*
 Plugin Name: Show QR URL
-Plugin URI: http://sebastian.thiele.me/projekte/wordpress-plugin-show-qr-url
 Description: This Plugin shows a QR-Code with the encoded URL of the corent Page. Useing Google Shart API
 Author: Sebastian Thiele
-Author URI: htt://sebastian.thiele.me
-Version: 1.4
+Author URI: htt://www.sebastian-thiele.net
+Version: 1.4.1
 */
+
+
+// Load JS & CSS for Admin
+function load_admin_js($hook) {
+	if ($hook == 'settings_page_show-qr-url') {
+		wp_enqueue_script( 
+			'showqrurl_admin_js', 
+			'/wp-content/plugins/show-qr-url/js/admin.js', 
+			array( 'jquery' ) 
+		);
+
+		wp_enqueue_style(
+			'showqrurl_admin_css',
+			'/wp-content/plugins/show-qr-url/css/admin.css'
+		);
+
+	}
+}
+add_action( 'admin_enqueue_scripts', 'load_admin_js' );
+
 
 include("showQRURLadmin.php");
 
@@ -171,7 +190,7 @@ function showQRURL_admin() {
 }
 
 $plugindir = basename(dirname(__FILE__));
-wp_enqueue_style("showqrurl_admin_css","/wp-content/plugins/show-qr-url/css/admin.css", false, 'last', 'all');
+
 
 
 
@@ -186,8 +205,5 @@ function showQRURL_init(){
 }
 add_action("plugins_loaded", "showQRURL_init");
 add_action("admin_menu", "showQRURL_admin");
-add_action("admin_head", "shoqQRURL_admin_js");
-
-
 
 ?>
