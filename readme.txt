@@ -53,7 +53,7 @@ Beide Funktionen koennen im Theme verwendet werden z.B.
 == Changelog ==
 
 = 1.4.1 =
-* Kompatibilität mit aktuellen Wordpress Versionen
+* Kompatibilität mit aktuellen Wordpress > 3.3
 
 = 1.4 =
 * Multilanguage support
