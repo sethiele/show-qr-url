@@ -1,13 +1,14 @@
 === Plugin Name ===
 Contributors: sebat
 Tags: widget, sidebar, QR-Code, mobile, piwik, Google Analytics
-Requires at least: 2.0
+Requires at least: 3.3
 Tested up to: 3.6
 Stable tag: 1.4.1
 Author: Sebastian Thiele
 Author URI: htt://www.sebastian-thiele.net
+License: GPLv2
 
-Diese Plugin baut ein Sidebar-Widget ein, in dem ein in der groessee anpassbarer QR Code angezeigt wird, der auf die aktuelle URL verweist.
+Sidebar-Widget zum generieren von QR-Codes die auf die aktuelle Seite verweisen.
 
 == Description ==
 
