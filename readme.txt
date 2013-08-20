@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Show QR URL ===
 Contributors: sebat
 Tags: widget, sidebar, QR-Code, mobile, piwik, Google Analytics
 Requires at least: 3.3
